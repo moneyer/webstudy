@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<ul>
+				<li v-for="item,index in items" :key="index">
+					{{index}}{{ item.message }}
+				</li>
+			</ul>
+			<ul>
+				<li v-for="vue,key in object" :key="key">
+					{{key}} : {{ vue }}
+				</li>
+			</ul>
+		</div>
+		
+		<script type="text/javascript">
+			var vm = new Vue({
+				el: '#app',
+				data: {
+					items: [
+						{ message : 'Foo'},
+						{ message : 'Bar'}
+					],
+					object: {
+						title: '123',
+						author: '456',
+						publishedAt: '789'
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

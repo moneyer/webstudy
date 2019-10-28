@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex-grow 属性</title>
+    <style>
+        #container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 600px;
+            height: 200px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        .inner1 {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            flex-grow: 1;
+        }
+
+        .inner2 {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            flex-grow: 2;
+        }
+
+        .inner3 {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            flex-grow: -1;
+        }
+
+    </style>
+</head>
+<body>
+<!--flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。-->
+
+<!--如果所有项目的flex-grow属性都为1，则它们将等分剩余空间（如果有的话）。-->
+<!--如果一个项目的flex-grow属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。-->
+<div id="container">
+    <div class="inner1">1</div>
+    <div class="inner2">2</div>
+    <div class="inner3">-1</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/vue.min.js"></script>
+    <style>
+            table tr td{
+                border:1px solid gray;
+                padding:10px;
+                 
+            }
+            table{
+                border-collapse:collapse;
+                width:800px;
+                table-layout:fixed;
+            }
+            tr.firstLine{
+                background-color: lightGray;
+            }
+            </style>
+</head>
+<body>
+    <div id="app">
+        <table>
+            <tr class="firstLine">
+                <td>视图类型</td>
+                <td>输入数据</td>
+                <td>绑定到vue上的数据</td>
+            </tr>
+            <tr>
+                <td>单行文本框1</td>
+                <td><input v-model.lazy="text1" placeholder="输入数据"></td>
+                <td>{{ text1 }}</td>
+            </tr>
+            <tr>
+                <td>单行文本框2</td>
+                <td><input v-model.lazy="text2" placeholder="输入数据"></td>
+                <td>{{ text2 }}</td>
+            </tr>
+        </table>
+    </div>
+    
+    <script>
+        var vm = new Vue({
+            el: document.getElementById('app'),
+            data: {
+                text1: '',
+                text2: ''
+            },
+            methods: {
+
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/**
+			 * 将其他数据类型转换为 Boolean
+			 *  - 使用Boolean()函数
+			 */
+			
+			var a = 123;  //true
+			a = -123; // true
+			a = 0; // false
+			a = Infinity; // true
+			a = NaN; // false
+			
+			// 调用Boolean()函数来将 a 转换为布尔值
+			a = Boolean(a);
+			
+			a = "false";
+			a = " ";
+			
+			a = Boolean(a);
+			
+			console.log(typeof a);
+			console.log(a);
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

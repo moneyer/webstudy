@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>06_在浏览器中使用art-template</title>
+</head>
+<body>
+	<!-- 注意：在浏览器中需要引用 lib/template-web.js-->
+	<script src="node_modules/art-template/lib/template-web.js"></script>
+	<script type="text/template" id="tpl">
+		<p>大家好，我叫：hello {{ name }}</p>
+		<p>我今年{{ age }}岁了</p>
+		<h1>我来自{{ province }}</h1>
+		<p>我喜欢：{{ each hobbies }}{{ $value }}{{ /each }}</p>
+	</script>
+	<script>
+		var ret = template('tpl', {
+			name: 'Jack',
+			age: 18,
+			province: '江山市',
+	        hobbies: [
+	          '写代码',
+	          '唱歌',
+	          '打游戏'
+	        ]
+		})
+
+		console.log(ret)
+	</script>
+</body>
+</html>

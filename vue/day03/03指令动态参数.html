@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../day01/vue.js" type="text/javascript" charset="utf-8">
+		</script>
+	</head>
+	<body>
+		<div id="app">
+			<a v-bind:href="url">test baidu</a>
+			<a v-on:click="doSomething">123</a>
+			<br/>
+			<a v-bind:[attributename]="url">test baidu</a>
+			<a v-on:[eventname].once="doSomething">123</a>
+			<!-- . 后面加事件修饰符 -->
+		</div>
+	</body>
+	<script type="text/javascript">
+		varvm = new Vue({
+			el: '#app',
+			data: {
+				// 动态参数 attributename 不可以含大写字母
+				attributename: 'href',
+				eventname: 'click',
+				url: '01插值.html'
+			},
+			methods: {
+				doSomething() {
+					console.log('hhh')
+				}
+			}
+		})
+	</script>
+</html>

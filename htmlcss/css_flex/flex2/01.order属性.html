@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>order属性</title>
+    <style>
+        #container {
+            display: flex;
+            flex-direction: row;
+            width: 600px;
+            height: 600px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        .inner1 {
+            width: 100px;
+            height: 30px;
+            background-color: orange;
+            order: 2;
+        }
+
+        .inner2 {
+            width: 100px;
+            height: 30px;
+            background-color: pink;
+            order: 3;
+        }
+
+        .inner3 {
+            width: 100px;
+            height: 30px;
+            background-color: purple;
+            order: 5;
+        }
+
+        .inner4 {
+            width: 100px;
+            height: 30px;
+            background-color: red;
+            order: 1;
+        }
+
+        .inner5 {
+            width: 100px;
+            height: 30px;
+            background-color: gray;
+            order: 4;
+        }
+    </style>
+</head>
+<body>
+<!--order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0-->
+<!--默认值是 0。规定灵活项目的顺序。-->
+<div id="container">
+    <div class="inner1">1</div>
+    <div class="inner2">2</div>
+    <div class="inner3">3</div>
+    <div class="inner4">4</div>
+    <div class="inner5">5</div>
+</div>
+</body>
+</html>

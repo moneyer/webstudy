@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/clipboard/dist/clipboard.min.js"></script>
+</head>
+<body>
+
+    <div id="container">
+        <input id="foo" type="text" value="hello">
+        <button class="btn" data-clipboard-action="cut" data-clipboard-target="#foo">Copy</button>
+    </div>
+
+<script>
+    // button的class的值
+    var clipboard = new Clipboard('.btn');
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+</script>
+</body>
+</html>

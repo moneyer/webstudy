@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			{{ data.a }}
+		</div>
+		
+		<script type="text/javascript">
+			// 我们的数据对象
+			var data = { a: 1 }
+			
+			// 该对象被加入到一个 Vue 实例中
+			var vm = new Vue({
+				el: '#app',
+				data: data
+			})
+			dtat.a = 123
+		</script>
+	</body>
+</html>

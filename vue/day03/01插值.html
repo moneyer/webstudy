@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../day01/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			{{ message }}
+			<p v-html="htmlMessage"></p>
+			
+			<p>
+				{{ number + 1 }}
+				
+				{{ ok ? 'YES' : 'NO' }}
+				
+				{{ string.split('').reverse().join('') }}
+			</p>
+			<!-- <p>{{ var a = 1 }}</p> -->
+			<p>
+				<!-- 流控制也不会生效，请使用三元表达式 -->
+				<!-- {{ if (ok) { return message } }} -->
+			</p>
+			<p><p v-if="seen">现在你看到我了</p></p>
+		</div>
+		<script type="text/javascript">
+			var vm = new Vue({
+				el: '#app',
+				data: {
+					message: '插值',
+					htmlMessage: '<p>这是一段话</p>',
+					number: 123,
+					ok: '123',
+					string: 'Hello Vue',
+					seen: true
+				}
+			})
+		</script>
+	</body>
+</html>

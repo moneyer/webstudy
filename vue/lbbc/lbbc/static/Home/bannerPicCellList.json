@@ -1,0 +1,36 @@
+{
+  "bannerPicCellList": [
+    {
+      "bannerPictureUrl": "http://cdn.lbbcol.com/LBBCBannerPic001981?x-oss-process=image/quality,Q_50&moditime=190415205121",
+      "bannerTargetAddress": "https://www.lbbcol.com/index.html#/home?active=group-by"
+    },
+    {
+      "bannerPictureUrl": "http://cdn.lbbcol.com/LBBCBannerPic001998?x-oss-process=image/quality,Q_50&moditime=190412095911",
+      "bannerTargetAddress": null
+    },
+    {
+      "bannerPictureUrl": "http://cdn.lbbcol.com/LBBCBannerPic001996?x-oss-process=image/quality,Q_50&moditime=190412085115",
+      "bannerTargetAddress": "https://www.lbbcol.com/index.html#/goods/goods-detail?goodsId=00003292"
+    },
+    {
+      "bannerPictureUrl": "http://cdn.lbbcol.com/LBBCBannerPic002010?x-oss-process=image/quality,Q_50&moditime=190410165313",
+      "bannerTargetAddress": "https://www.lbbcol.com/index.html#/goods/goods-detail?goodsId=00000898"
+    },
+    {
+      "bannerPictureUrl": "http://cdn.lbbcol.com/LBBCBannerPic002011?x-oss-process=image/quality,Q_50&moditime=190410165641",
+      "bannerTargetAddress": "https://www.lbbcol.com/index.html#/goods/goods-detail?goodsId=00001151"
+    },
+    {
+      "bannerPictureUrl": "http://cdn.lbbcol.com/LBBCBannerPic002012?x-oss-process=image/quality,Q_50&moditime=190410165641",
+      "bannerTargetAddress": "https://www.lbbcol.com/index.html#/goods/goods-detail?goodsId=00002634"
+    },
+    {
+      "bannerPictureUrl": "http://cdn.lbbcol.com/LBBCBannerPic002013?x-oss-process=image/quality,Q_50&moditime=190410165641",
+      "bannerTargetAddress": "https://www.lbbcol.com/index.html#/goods/goods-detail?goodsId=00002811"
+    },
+    {
+      "bannerPictureUrl": "http://cdn.lbbcol.com/LBBCBannerPic001951?x-oss-process=image/quality,Q_50&moditime=190409104610",
+      "bannerTargetAddress": "https://www.lbbcol.com/index.html#/goods/goods-detail?goodsId=00003278"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex-shrink 属性</title>
+    <style>
+        #container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 600px;
+            height: 200px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        .inner1 {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            display: flex;
+            flex-shrink: 1;
+        }
+
+        .inner2 {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            display: flex;
+            flex-shrink: 0;
+        }
+
+        .inner3 {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            display: flex;
+            flex-shrink: 1;
+        }
+
+    </style>
+</head>
+<body>
+<!--flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。-->
+
+<!--如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比例缩小。-->
+<!--如果一个项目的flex-shrink属性为0，其他项目都为1，则空间不足时，前者不缩小。负值对该属性无效。-->
+<div id="container">
+    <div class="inner1">flex-shrink: 1;</div>
+    <div class="inner2">flex-shrink: 0;</div>
+    <div class="inner3">flex-shrink: 1;</div>
+</div>
+<div>
+    flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。<br>
+
+    如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比例缩小。
+    如果一个项目的flex-shrink属性为0，其他项目都为1，则空间不足时，前者不缩小。负值对该属性无效。
+</div>
+</body>
+</html>
