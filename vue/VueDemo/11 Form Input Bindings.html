@@ -12,6 +12,28 @@
 				<p>Message is: {{ message }}</p>
 				<textarea v-model="message2" placeholder="add mutople lines"></textarea>
 				<p style="white-space: pre-line;">{{ message2 }}</p>
+				<br />
+				
+				<div style="margin-top: 20px;">
+					<input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+					<lable for="jack">Jack</lable>
+					<input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+					<lable for="mike">Mike</lable>
+					<input type="checkbox" id="john" value="John" v-model="checkedNames">
+					<lable for="john">John</lable>
+					<span>Checked names : {{ checkedNames}}</span>
+				</div>
+				
+				<div style="margin-top: 20px;">
+					<input type="radio" id="one" value="One" v-model="piked">
+					<lable for="one">One</lable>
+					<br />
+					<input type="radio" id="two" value="Two" v-model="piked">
+					<lable for="two">Two</lable>
+					<br />
+					<span>Piked : {{ piked }}</span>
+					<button @click="submit()" type="button">提交</button>
+				</div>
 				
 				
 			</div>
@@ -21,8 +43,15 @@
 			var vm = new Vue({
 				el: '#app',
 				data: {
-					message: '',
-					message2: ''
+					message: 'test',
+					message2: 'hi',
+					checkedNames: ['Jack', 'John'],
+					piked: "Two"
+				},
+				methods: {
+					submit() {
+						console.log(this.message)
+					}
 				}
 			})
 		</script>
