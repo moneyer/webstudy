@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			
+			<!-- 对象语法 -->
+			<div :class="{ active: isActive }">
+				:class
+			</div>
+			
+			<div class="static" 
+			:class="{ active: isActive, 'text-danger' : hasError}">
+				123
+			</div>
+			
+			<div :class="classObject">
+				计算属性
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			var vm = new Vue({
+				el: '#app',
+				data: {
+					isActive: true,
+					hasError: true,
+					error: null
+				},
+				computed: {
+					classObject() {
+						return {
+							active: this.isActive && this.error,
+							'text-danger': this.error && this.error.type === 'fatal'
+						}
+					}
+				}
+			})
+		</script>
+		
+		<style type="text/css">
+			.static{ 
+				height: 200px;
+				width: 200px;
+				}
+			.active{ font-size: 30px;}
+		</style>
+	</body>
+</html>
