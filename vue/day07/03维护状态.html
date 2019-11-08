@@ -7,10 +7,10 @@
 	</head>
 	<body>
 		
-		
 		<div id="app">
-			<li v-for="item,index in items">
-				{{ item.message }}--{{ index }}
+			<li v-for="item,index in items"
+			:key="item.id">
+				{{ item.message }}
 			</li>
 		</div>
 		
@@ -19,8 +19,14 @@
 				el: '#app',
 				data: {
 					items: [
-						{message: 'Foo'},
-						{message: 'Bar'}
+						{
+							id: 1, 
+							message: 'Foo',
+							},
+						{
+							id: 2,
+							message: 'Bar',
+							}
 					]
 				}
 			})

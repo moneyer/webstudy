@@ -6,11 +6,9 @@
 		<script src="../vue.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
-		
-		
 		<div id="app">
-			<li v-for="item,index in items">
-				{{ item.message }}--{{ index }}
+			<li v-for="(values, name, index) in object">
+				{{index}}---{{ name }} : {{ values }}
 			</li>
 		</div>
 		
@@ -18,10 +16,11 @@
 			var vm = new Vue({
 				el: '#app',
 				data: {
-					items: [
-						{message: 'Foo'},
-						{message: 'Bar'}
-					]
+					object: {
+						title: 'How to do lists in Vue',
+						author: 'Jan Doe',
+						publishedAt: '2016-04-10'
+					}
 				}
 			})
 		</script>
