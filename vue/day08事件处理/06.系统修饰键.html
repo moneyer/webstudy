@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- Alt + C -->
+        <input @keyup.alt.67="clear">
+
+        <!-- Ctrl + Click -->
+        <div @click.ctrl="doSomething">Do something</div>
+
+        <!-- 即使 Alt 或 Shift 被一同按下时也会触发 -->
+        <button @click.ctrl="onClick">A</button>
+
+        <!-- 有且只有 Ctrl 被按下的时候才触发 -->
+        <button @click.ctrl.exact="onCtrlClick">A</button>
+
+        <!-- 没有任何系统修饰符被按下的时候才触发 -->
+        <button @click.exact="onClick">A</button>
+
+    </div>
+
+
+    <script type="text/javascript">
+        var vm = new Vue({
+            el: '#app',
+            data: {
+            },
+            methods: {
+                clear() {
+                    console.log('clear')
+                },
+                doSomething() {
+                    console.log('doSomething')
+                },
+                onClick() {
+                    console.log('onClick')
+                },
+                onCtrlClick() {
+                    console.log('onCtrlClick')
+                }
+            },
+        })
+    </script>
+</body>
+</html>

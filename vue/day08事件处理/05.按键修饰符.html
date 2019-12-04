@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="app">
+
+        <!-- 只有在 `key` 是 `Enter` 时调用 `vm.submit()` -->
+        <input @keyup.enter="submit">
+
+        <!-- 可以直接将 KeyboardEvent.key 暴露的任意有效按键名转换为 kebab-case 来作为修饰符。 -->
+        <input @keyup.page-down="onPageDown">
+
+        <!-- 在上述示例中，处理函数只会在 $event.key 等于 PageDown 时调用。 -->
+
+
+        <input @keyuo.13="submit">
+    </div>
+
+
+    <script type="text/javascript">
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                counter: 0
+            },
+            methods: {
+                submit() {
+                    console.log(123)
+                },
+                onPageDown() {
+                    console.log('this is PageDown')
+                }
+            },
+        })
+    </script>
+</body>
+</html>

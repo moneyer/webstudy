@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="app">
+
+        <!-- 阻止单击事件继续传播 -->
+        <a @click.stop="doThis">www.baidu.com</a>
+
+        <!-- 提交事件不在重载页面 -->
+        <form @submit.prevent="onSubmbit">@submit.prevent</form>
+
+        <!-- 修饰符可以串联 -->
+        <a @click.stop.prevent="doThat">@click.stop.prevent</a>
+
+        <!-- 只有一个修饰符 -->
+        <form @submit.prevent>@submit.prevent</form>
+
+        <!-- 添加事件监听器时使用事件捕获模式 -->
+        <!-- 即内部元素触发的事件在此处理，然后交由内部元素进行处理 -->
+        <div @click.capture="doThis">div........</div>
+
+        <!-- 只当在 event.target 是当前元素自身时触发处理函数 -->
+        <!-- 即事件不是从内部元素触发的 -->
+        <div @click.self="doThat">....</div>
+
+        <!-- 点击事件只会触发一次 -->
+        <button @click.once="doThis">点我啊，只有第一次有用</button>
+
+        <!-- 滚动事件的默认行为（即滚动行为）将会立即触发 -->
+        <!-- 而不会等待 `onScroll` 完成 -->
+        <!-- 这其中包含 `event.preventDefault()` 的情况 -->
+        <div @scroll.passive="onScroll">拉动触发滚屏</div>
+        
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+            },
+            methods: {
+                doThis() {
+                    console.log('doThis')
+                },
+                doThat() {
+                    console.log('doThat')
+                },
+                onScroll() {
+                    console.log('我在滚动')
+                }
+            }
+        })
+    </script>
+</body>
+</html>
