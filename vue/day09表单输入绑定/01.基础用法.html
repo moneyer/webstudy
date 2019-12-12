@@ -9,9 +9,79 @@
 </head>
 <body>
     <div id="app">
+        <!-- 文本 -->
         <input v-model="message" placeholder="edit me">
         <p>Message is: {{ message }}</p>
 
+        <!-- 多行文本 -->
+        <span>Mutiline message is:</span>
+        <p style="white-space: pre-line;">{{ message2 }}</p>
+        <br>
+        <textarea cols="30" rows="10" v-model="message2" placeholder="add mutiline lines"></textarea>
+
+        <br>
+        <!-- 复选框 -->
+        <!-- 单个复选框，绑定到布尔值 -->
+        <input type="checkbox" id="checkbox" v-model="checked">
+        <label for="checkbox">{{ checked }}</label>
+
+        <br>
+        <!-- 多个复选框 -->
+        <!-- 多个复选框，绑定到同一数组 -->
+        <div>
+            <input type="checkbox" name="jack" id="jack" value="Jack" v-model="checkedNames">
+            <label for="jack">Jack</label>
+            <input type="checkbox" name="john" id="john" value="John" v-model="checkedNames">
+            <label for="john">John</label>
+            <input type="checkbox" name="mike" id="mike" value="Mike" v-model="checkedNames">
+            <label for="mike">Mike</label>
+            <br>
+            <span>Checked names: {{ checkedNames }}</span>
+        </div>
+
+        <!-- 单选按钮 -->
+        <div>
+            <input type="radio" name="one" id="one" value="One" v-model="picked">
+            <label for="one">One</label>
+            <br>
+            <input type="radio" name="two" id="two" value="Two" v-model="picked">
+            <label for="two">Two</label>
+            <br>
+            <span>Picked: {{ picked }}</span>
+        </div>
+
+        <!-- 单选框 -->
+        <br>
+        <br>
+        <div>
+            <select v-model="selected">
+                <option disable value="">请选择</option>
+                <option>A</option>
+                <option>B</option>
+                <option>C</option>
+            </select>
+            <span> Selected: {{ selected }}</span>
+        </div>
+
+        <div>
+            <select v-model="selected2" multiple style="width: 50px;">
+                <option disable value="">请选择</option>
+                <option>A</option>
+                <option>B</option>
+                <option>C</option>
+            </select>
+            <span> Selected: {{ selected2 }}</span>
+        </div>
+
+        <br>
+        <div>
+            <select v-model="selected3">
+                <option v-for="(option, index) in options" :key="option.value">
+                    {{ option.text }}
+                </option>
+            </select>
+            <span>Selected: {{ selected3 }}</span>
+        </div>
 
     </div>
 
@@ -19,7 +89,19 @@
         var vm = new Vue({
             el: '#app',
             data: {
-                message: ''
+                message: '',
+                message2: '',
+                checked: false,
+                checkedNames: [],
+                picked: '',
+                selected: '',
+                selected2: [],
+                selected3: 'A',
+                options: [
+                    { text: 'One', value: 'A'},
+                    { text: 'Two', value: 'B'},
+                    { text: 'Three', value: 'C'}
+                ]
             }
         })
     </script>

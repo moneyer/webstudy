@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="app">
+
+        <!-- 当选中时，`picked` 为字符串 'a' -->
+        <input type="radio" v-model="picked" value="a">
+        <span>picked: {{ picked }}</span>
+
+        <br>
+        <!-- `toggle` 为 true 或 false -->
+        <input type="checkbox" v-model="toggle">
+        <span>toggle: {{ toggle }}</span>
+
+        <br>
+        <!-- 当选中第一个选项时，`selected` 为字符串 'abc' -->
+        <select v-model="selected">
+            <option value="abc">ABC</option>
+        </select>
+        <span>selected: {{ selected }}</span>
+
+    </div>
+    
+    <script type="text/javascript">
+        var vm = new Vue({
+            el: '#app',
+            data() {
+                return {
+                    picked: '',
+                    toggle: '',
+                    selected: ''
+                }
+            },
+        })
+    </script>
+</body>
+</html>
